@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Hype Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sneaker Hype Tracker</h1>
+            <p class="subtitle">AI-powered brand analysis using Groq</p>
+        </header>
+
+        <div class="controls">
+            <select id="brandSelect" class="brand-select">
+                <option value="">Select a brand...</option>
+                <option value="nike">Nike</option>
+                <option value="adidas">Adidas</option>
+                <option value="puma">Puma</option>
+                <option value="newbalance">New Balance</option>
+                <option value="asics">Asics</option>
+                <option value="reebok">Reebok</option>
+            </select>
+            <button id="analyzeBtn" class="btn-primary">Analyze Hype</button>
+            <button id="compareBtn" class="btn-secondary">Compare All</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Agent is thinking...</p>
+        </div>
+
+        <div id="results" class="results hidden">
+            <div class="grid">
+                <!-- Hype Score Gauge -->
+                <div class="card">
+                    <h3>Hype Score</h3>
+                    <div class="gauge-container">
+                        <svg class="gauge" viewBox="0 0 200 120">
+                            <path class="gauge-bg" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#333" stroke-width="20"/>
+                            <path id="gaugeProgress" class="gauge-progress" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#00ff88" stroke-width="20" stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+                        </svg>
+                        <div class="gauge-value">
+                            <span id="scoreValue">0</span>
+                            <span class="gauge-label">/100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation -->
+                <div class="card recommendation-card">
+                    <h3>Recommendation</h3>
+                    <div id="recommendation" class="recommendation">
+                        <div class="rec-emoji">👀</div>
+                        <div class="rec-action">HOLD</div>
+                        <div class="rec-reason">Waiting for analysis...</div>
+                    </div>
+                </div>
+
+                <!-- Trend Chart -->
+                <div class="card chart-card">
+                    <h3>Mention Trend (30 days)</h3>
+                    <canvas id="trendChart"></canvas>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="card">
+                    <h3>Key Metrics</h3>
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric-label">Mentions</span>
+                            <span id="mentions" class="metric-value">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Change</span>
+                            <span id="mentionChange" class="metric-value">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Sentiment</span>
+                            <span id="sentiment" class="metric-value">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Avg Price</span>
+                            <span id="avgPrice" class="metric-value">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Signals -->
+                <div class="card signals-card">
+                    <h3>Key Signals</h3>
+                    <ul id="signals" class="signals-list">
+                        <li>No signals yet...</li>
+                    </ul>
+                </div>
+
+                <!-- Agent Reasoning -->
+                <div class="card reasoning-card">
+                    <h3>Agent Reasoning</h3>
+                    <div id="reasoning" class="reasoning">
+                        <p class="reasoning-step">Waiting for analysis...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Output -->
+            <div class="card analysis-card">
+                <h3>AI Analysis</h3>
+                <div id="analysis" class="analysis-text">
+                    <p>Select a brand and click "Analyze Hype" to begin...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compare Results -->
+        <div id="compareResults" class="compare-results hidden">
+            <h2>Brand Comparison</h2>
+            <div id="compareGrid" class="compare-grid"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

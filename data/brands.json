@@ -1,0 +1,56 @@
+{
+  "nike": {
+    "mentions": 15420,
+    "change_pct": 23,
+    "sentiment": 78,
+    "avg_price": 120,
+    "price_change": 8,
+    "signals": ["Air Max trending on TikTok", "Dunk Low restocks selling out", "Collaboration rumors with Travis Scott"],
+    "history": [12000, 13200, 14100, 15420]
+  },
+  "adidas": {
+    "mentions": 9800,
+    "change_pct": -12,
+    "sentiment": 62,
+    "avg_price": 95,
+    "price_change": -5,
+    "signals": ["Yeezy line discontinued", "Forum 84 gaining traction", "Samba retro popular"],
+    "history": [11200, 10800, 10200, 9800]
+  },
+  "puma": {
+    "mentions": 4300,
+    "change_pct": 45,
+    "sentiment": 71,
+    "avg_price": 85,
+    "price_change": 12,
+    "signals": ["Suede Classic comeback", "LaMelo Ball signature hot", "Retro runners trending"],
+    "history": [2900, 3200, 3800, 4300]
+  },
+  "newbalance": {
+    "mentions": 8900,
+    "change_pct": 67,
+    "sentiment": 82,
+    "avg_price": 130,
+    "price_change": 18,
+    "signals": ["550 model exploding", "Dad shoe trend continues", "Celebrity endorsements rising"],
+    "history": [5300, 6400, 7600, 8900]
+  },
+  "asics": {
+    "mentions": 6200,
+    "change_pct": 34,
+    "sentiment": 75,
+    "avg_price": 110,
+    "price_change": 15,
+    "signals": ["Gel-Kayano resurgence", "Running community hype", "Kiko Kostadinov collab demand"],
+    "history": [4600, 5100, 5700, 6200]
+  },
+  "reebok": {
+    "mentions": 2800,
+    "change_pct": -8,
+    "sentiment": 58,
+    "avg_price": 75,
+    "price_change": -2,
+    "signals": ["Classic Leather steady", "Club C white sneakers stable", "Brand repositioning unclear"],
+    "history": [3100, 2900, 2850, 2800]
+  }
+}
