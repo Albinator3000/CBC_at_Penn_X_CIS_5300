@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000';
+const API_BASE = 'http://localhost:5001';
 let trendChart = null;
 
 // Initialize
@@ -34,7 +34,7 @@ async function analyzeBrand() {
 }
 
 async function compareAllBrands() {
-    const brands = ['nike', 'adidas', 'puma', 'newbalance', 'asics', 'reebok'];
+    const brands = ['nike', 'adidas', 'puma', 'newbalance', 'asics', 'reebok', 'converse', 'vans'];
 
     showLoading();
     hideResults();

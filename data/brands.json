@@ -52,5 +52,23 @@
     "price_change": -2,
     "signals": ["Classic Leather steady", "Club C white sneakers stable", "Brand repositioning unclear"],
     "history": [3100, 2900, 2850, 2800]
+  },
+  "converse": {
+    "mentions": 11500,
+    "change_pct": 75,
+    "sentiment": 88,
+    "avg_price": 95,
+    "price_change": 15,
+    "signals": ["Chuck Taylor collaborations exploding", "Luxury fashion partnerships surging", "Gen-Z adoption skyrocketing"],
+    "history": [6500, 8200, 9800, 11500]
+  },
+  "vans": {
+    "mentions": 13200,
+    "change_pct": 82,
+    "sentiment": 90,
+    "avg_price": 85,
+    "price_change": 16,
+    "signals": ["Old Skool becoming streetwear staple", "TikTok viral trends dominating", "Limited edition drops selling instantly"],
+    "history": [7200, 9100, 11000, 13200]
   }
 }

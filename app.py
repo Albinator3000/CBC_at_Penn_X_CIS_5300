@@ -1,7 +1,13 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
-from agent import analyze_brand
 import json
+from dotenv import load_dotenv
+
+# Load environment variables from .env file BEFORE importing agent
+load_dotenv()
+
+# Import agent after loading environment variables
+from agent import analyze_brand
 
 app = Flask(__name__, static_folder='static')
 CORS(app)
@@ -44,5 +50,10 @@ def get_brands():
         data = json.load(f)
     return jsonify(list(data.keys()))
 
+# Serve static files - this must be LAST to not interfere with API routes
+@app.route('/<path:filename>')
+def serve_static(filename):
+    return send_from_directory('static', filename)
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)

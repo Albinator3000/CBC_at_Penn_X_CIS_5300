@@ -24,18 +24,18 @@ def generate_recommendation(score: int) -> dict:
     if score >= 75:
         return {
             "action": "BUY",
-            "emoji": "🚀",
+            "emoji": "↑",
             "reason": "Strong upward momentum with high sentiment"
         }
     elif score >= 55:
         return {
             "action": "HOLD",
-            "emoji": "👀",
+            "emoji": "→",
             "reason": "Moderate hype with potential growth"
         }
     else:
         return {
             "action": "SELL",
-            "emoji": "📉",
+            "emoji": "↓",
             "reason": "Declining interest and negative trends"
         }

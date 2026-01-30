@@ -11,7 +11,7 @@
     <div class="container">
         <header>
             <h1>Sneaker Hype Tracker</h1>
-            <p class="subtitle">AI-powered brand analysis using Groq</p>
+            <p class="subtitle">AI-powered brand analysis using <span>Groq Llama 3.1 8B</span></p>
         </header>
 
         <div class="controls">
@@ -23,6 +23,8 @@
                 <option value="newbalance">New Balance</option>
                 <option value="asics">Asics</option>
                 <option value="reebok">Reebok</option>
+                <option value="converse">Converse</option>
+                <option value="vans">Vans</option>
             </select>
             <button id="analyzeBtn" class="btn-primary">Analyze Hype</button>
             <button id="compareBtn" class="btn-secondary">Compare All</button>
@@ -54,7 +56,7 @@
                 <div class="card recommendation-card">
                     <h3>Recommendation</h3>
                     <div id="recommendation" class="recommendation">
-                        <div class="rec-emoji">👀</div>
+                        <div class="rec-emoji">→</div>
                         <div class="rec-action">HOLD</div>
                         <div class="rec-reason">Waiting for analysis...</div>
                     </div>
@@ -121,6 +123,11 @@
             <div id="compareGrid" class="compare-grid"></div>
         </div>
     </div>
+
+    <footer>
+        <p>CIS 5300: Natural Language Processing | Demo for Prof. Chris Callison-Burch</p>
+        <p style="margin-top: 10px;">Built with Groq AI • Llama 3.3 70B • Flask • Chart.js</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
