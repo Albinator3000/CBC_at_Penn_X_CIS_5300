@@ -11,11 +11,11 @@ An AI-powered sneaker brand analysis dashboard demonstrating modern NLP agent ar
 ## Screenshots
 
 ### Dashboard Analysis View
-![Sneaker Hype Tracker - Analysis View](screenshots/analysis-view.png)
+![Sneaker Hype Tracker - Analysis View](images/final.png)
 *AI agent analyzing New Balance with hype score, recommendation, trend chart, and real-time reasoning*
 
 ### Agent Thinking State
-![Agent Processing](screenshots/agent-thinking.png)
+![Agent Processing](images/loading.png)
 *Real-time loading state showing agent tool calling in progress*
 
 ## NLP Concepts Demonstrated
