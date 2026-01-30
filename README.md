@@ -6,11 +6,21 @@
 
 ## Overview
 
-An AI-powered sneaker brand analysis dashboard demonstrating modern NLP agent architectures. Uses **Groq's Llama 3.1 70B** with tool calling to analyze market sentiment and provide investment recommendations.
+An AI-powered sneaker brand analysis dashboard demonstrating modern NLP agent architectures. Uses **Groq's Llama 3.1 8B** with tool calling to analyze market sentiment and provide investment recommendations.
+
+## Screenshots
+
+### Dashboard Analysis View
+![Sneaker Hype Tracker - Analysis View](screenshots/analysis-view.png)
+*AI agent analyzing New Balance with hype score, recommendation, trend chart, and real-time reasoning*
+
+### Agent Thinking State
+![Agent Processing](screenshots/agent-thinking.png)
+*Real-time loading state showing agent tool calling in progress*
 
 ## NLP Concepts Demonstrated
 
-1. **Large Language Model Integration** - Llama 3.1 70B for reasoning
+1. **Large Language Model Integration** - Llama 3.1 8B for reasoning
 2. **Tool Calling & Function Execution** - LLM autonomously selects and executes tools
 3. **Multi-step Agent Reasoning** - Chain-of-thought visible in real-time
 4. **Natural Language to Structured Output** - Query → Analysis → Recommendation
@@ -19,9 +29,9 @@ An AI-powered sneaker brand analysis dashboard demonstrating modern NLP agent ar
 ## Tech Stack
 
 - **Backend**: Python, Flask, Groq API
-- **Agent**: Llama 3.1 70B with tool calling
+- **Agent**: Llama 3.1 8B Instant with tool calling
 - **Frontend**: Vanilla JS, Chart.js
-- **Data**: Mock sneaker brand metrics (6 brands)
+- **Data**: Mock sneaker brand metrics (8 brands)
 
 ## Quick Start
 
@@ -36,7 +46,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Open `http://localhost:5000` in your browser.
+Open `http://localhost:5001` in your browser.
 
 ## Demo Flow
 
